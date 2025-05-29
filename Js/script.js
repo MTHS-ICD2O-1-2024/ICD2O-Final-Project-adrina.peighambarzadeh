@@ -15,28 +15,21 @@ let isSpinning = false;
 function spinWheel() {
   const question = document.getElementById("question-input").value.trim();
   const result = document.getElementById("result");
-  const wheel = document.getElementById("wheel");
+  const pointer = document.getElementById("pointer");
 
-  // check for empty question
   if (question.length === 0) {
     result.innerHTML = "Please enter a question first.";
     return;
   }
 
-  // prevent double spins
   if (isSpinning) return;
-
   isSpinning = true;
-
-  // Clear previous result
   result.innerHTML = "";
 
-  // process: calculate random spin angle
   const spinAngle = 360 * 5 + Math.floor(Math.random() * 360);
-  wheel.style.transition = "transform 4s ease-out";
-  wheel.style.transform = "rotate(" + spinAngle + "deg)";
+  pointer.style.transition = "transform 4s ease-out";
+  pointer.style.transform = "rotate(" + spinAngle + "deg)";
 
-  // output: show answer after spinning ends
   setTimeout(function () {
     const finalAngle = spinAngle % 360;
     const answer = finalAngle < 180 ? "Yes" : "No";
@@ -44,8 +37,3 @@ function spinWheel() {
     isSpinning = false;
   }, 4000);
 }
-
-// add click listener to the wheel
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("wheel").addEventListener("click", spinWheel);
-});
