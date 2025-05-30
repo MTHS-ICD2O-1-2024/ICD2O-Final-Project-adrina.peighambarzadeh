@@ -2,44 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Yes/No Spinner" />
-  <meta name="keywords" content="mths, icd2o" />
-  <meta name="author" content="Adrina Peighambarzadeh" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-amber.min.css" />
-  <title>spinner, yes no, with Js</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yes Maybe No Spinner</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script defer src="./js/script.js"></script>
-
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">spinner, yes no, with Js</span>
-      </div>
-    </header>
-    <main class="mdl-layout__content">
-      <br />
-      <div class="page-content-guide">Type any yes-or-no question below and click the wheel to spin:</div>
-      <form onsubmit="return false;">
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="question-input" />
-          <label class="mdl-textfield__label" for="question-input">Type your question...</label>
-        </div>
-      </form>
-
-      <div style="text-align: center;">
-        <div id="pointer"></div>
-        <div id="wheel" title="Click to spin!"></div>
-        <div id="result"></div>
-      </div>
-    </main>
+  <div class="wrapper">
+    <div class="container">
+      <canvas id="wheel" width="300" height="300"></canvas>
+      <button id="spin-btn">Spin</button>
+      <img src="image/Screenshot_2025-05-29_225940-removebg-preview.png" alt="spinner arrow" />
+    </div>
+    <div id="final-value">
+      <p>Click the Spin button to start</p>
+    </div>
   </div>
+
+  <!-- Load Chart.js and datalabels plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
