@@ -1,71 +1,53 @@
-const wheel = document.getElementById("wheel");
-const spinBtn = document.getElementById("spin-btn");
-const finalValue = document.getElementById("final-value");
+// Copyright (c) 2025 Ain Jeong All rights reserved
+//
+// Created by: Adrina Peighambarzadeh
+// Created on: May 2025
+// This file contains the JS functions for index.html
 
-const options = ["Yes", "Maybe", "No"];
-const data = [1, 1, 1]; // equal slices
-const colors = ["#4CAF50", "#FF9800", "#F44336"]; // green, orange, red
+'use strict'
 
-// Each segment is 120 degrees
-const rotationRanges = [
-  { minDegree: 0, maxDegree: 119, value: "Yes" },
-  { minDegree: 120, maxDegree: 239, value: "Maybe" },
-  { minDegree: 240, maxDegree: 359, value: "No" },
-];
-
-// Initialize Chart.js pie chart
-let myChart = new Chart(wheel, {
-  plugins: [ChartDataLabels],
-  type: "pie",
-  data: {
-    labels: options,
-    datasets: [{
-      data: data,
-      backgroundColor: colors,
-      borderWidth: 2,
-      borderColor: "#ffffff",
-    }],
-  },
-  options: {
-    responsive: true,
-    animation: { duration: 0 },
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
-      datalabels: {
-        color: "#fff",
-        font: { size: 24, weight: "bold" },
-        formatter: (value, ctx) => ctx.chart.data.labels[ctx.dataIndex],
-      },
-    },
-  },
-});
-
-function getResult(degree) {
-  degree = degree % 360; // Normalize angle
-  for (let range of rotationRanges) {
-    if (degree >= range.minDegree && degree <= range.maxDegree) {
-      return range.value;
-    }
-  }
-  return null;
+/**
+ * Check service worker.
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js", {
+    scope: "/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/",
+  })
 }
 
-spinBtn.addEventListener("click", () => {
-  spinBtn.disabled = true;
-  finalValue.textContent = "Spinning...";
+/**
+ * This function simulates a Yes/No spinner.
+ */
+// eslint-disable-next-line no-unused-vars
+function spin() {
+  const question = document.getElementById('question').value.trim()
+  const resultEl = document.getElementById('result')
+  const yesImage = document.getElementById('yesImage')
+  const noImage = document.getElementById('noImage')
 
-  const randomDegree = Math.floor(Math.random() * 360);
-  const spins = Math.floor(Math.random() * 10) + 5; // 5 to 14 spins
-  const totalRotation = spins * 360 + randomDegree;
+  // Input validation
+  if (question === "") {
+    alert("Please enter a question.")
+    return
+  }
+  
 
-  wheel.style.transition = "transform 5s ease-out";
-  wheel.style.transform = `rotate(${totalRotation}deg)`;
+  // Process: Generate random yes/no answer
+  let answer;
+if (Math.random() < 0.5) {
+  answer = "Yes";
+} else {
+  answer = "No";
+}
 
-  wheel.addEventListener("transitionend", () => {
-    const selected = getResult(randomDegree);
-    finalValue.textContent = `Result: ${selected}`;
-    spinBtn.disabled = false;
-    wheel.style.transition = "";
-  }, { once: true });
-});
+  // Output: Display result and image
+  resultEl.textContent = "Question: " + question + "\nAnswer: " + answer;
+
+  if (answer === "Yes") {
+    yesImage.style.display = "block";
+    noImage.style.display = "none";
+  } else {
+    yesImage.style.display = "none";
+    noImage.style.display = "block";
+  }
+}

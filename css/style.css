@@ -1,69 +1,104 @@
-* {
+/* Created by: Shanea Jaromay (adapted by: Adrina Peighambarzadeh)
+* Created on: Apr-May 2025
+* This file contains the CSS for index.html
+*/
+
+.mdl-layout__header-row {
+  justify-content: center;
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(135deg, #c3a3f1, #6414e9);
-  font-family: Arial, sans-serif;
+.mdl-layout__content {
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+  padding-bottom: 1cm;
+  /* Added from Shanea's CSS */
 }
 
-.wrapper {
-  width: 90%;
-  max-width: 350px;
-  max-height: 90vh;
-  background-color: #ffffff;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  padding: 2em;
-  border-radius: 1em;
-  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+.mdl-textfield__error {
+  color: lightgreen;
+}
+
+.page-content,
+.page-content-guide,
+.page-content-answer {
+  color: rgb(0 0 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
   text-align: center;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.page-content {
+  text-align: left;
+  /* Restored original structure */
 }
 
-#wheel {
-  width: 300px;
-  height: 300px;
-  display: block;
-  margin: 0 auto;
+.page-content-guide {
+  margin-top: 40px;
 }
 
-#spin-btn {
+.page-content-answer {
   margin-top: 20px;
-  height: 50px;
-  width: 100px;
-  border-radius: 50px;
-  cursor: pointer;
-  border: none;
-  background: radial-gradient(circle, #fdcf3b 50%, #d88a40 85%);
-  color: #c66e16;
-  font-weight: 600;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 img {
-  position: absolute;
-  width: 40px;
-  top: 50%;
-  right: -30px;
-  transform: translateY(-50%);
+  height: auto;
+  width: 250px;
+  float: right;
+  border-color: black;
 }
 
-#final-value {
-  font-size: 1.4em;
-  margin-top: 1.5em;
-  color: #202020;
-  font-weight: 600;
+body {
+  background-color: rgb(131, 172, 211);
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Styles from Shanea's version */
+input {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#spinner-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 30px auto;
+}
+
+#spinner-wheel {
+  width: 100%;
+  transition: transform 4s ease-out;
+  transform: rotate(0deg);
+}
+
+#result {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#wordsInput {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#yesImage,
+#noImage {
+  display: block;
+  margin: 20px auto;
+  /* centers horizontally */
+  max-width: 300px;
 }
