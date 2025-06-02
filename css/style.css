@@ -48,6 +48,7 @@
   height: auto;
   width: 250px;
   border-color: black;
+
   /* Removed duplicate float */
   float: right;
 }
@@ -102,6 +103,7 @@ button {
 #noImage {
   display: block;
   margin: 20px auto;
+
   /* centers horizontally */
   max-width: 300px;
 }

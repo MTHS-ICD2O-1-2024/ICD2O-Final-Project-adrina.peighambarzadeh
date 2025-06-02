@@ -37,7 +37,7 @@ function spin () {
       answer = 'No'
     }
 
-  // Output: Display result and image
+    // Output: Display result and image
     resultEl.textContent = 'Question: ' + question + '\nAnswer: ' + answer
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
