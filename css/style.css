@@ -42,15 +42,16 @@
   margin-top: 20px;
 }
 
-img {
+.img {
   height: auto;
   width: 250px;
   float: right;
   border-color: black;
+  float: center;
 }
 
 body {
-  background-color: rgb(131, 172, 211);
+  background-color: rgb(234, 213, 141);
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 60px;
   text-align: center;

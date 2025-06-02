@@ -28,17 +28,15 @@ function spin() {
   // Input validation
   if (question === "") {
     alert("Please enter a question.")
-    return
-  }
-  
+  } else {
+    // Process: Generate random yes/no answer
+    let answer;
+    if (Math.random() < 0.5) {
+      answer = "Yes";
+    } else {
+      answer = "No";
+    }
 
-  // Process: Generate random yes/no answer
-  let answer;
-if (Math.random() < 0.5) {
-  answer = "Yes";
-} else {
-  answer = "No";
-}
 
   // Output: Display result and image
   resultEl.textContent = "Question: " + question + "\nAnswer: " + answer;
@@ -50,4 +48,5 @@ if (Math.random() < 0.5) {
     yesImage.style.display = "none";
     noImage.style.display = "block";
   }
+}
 }
