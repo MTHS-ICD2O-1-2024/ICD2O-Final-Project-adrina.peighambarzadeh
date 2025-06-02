@@ -1,7 +1,7 @@
-/* Created by: Shanea Jaromay (adapted by: Adrina Peighambarzadeh)
-* Created on: Apr-May 2025
-* This file contains the CSS for index.html
-*/
+/* Created by: Adrina peighambarzadeh
+ * Created on: June 2025
+ * This file contains the CSS for index.html
+ */
 
 .mdl-layout__header-row {
   justify-content: center;
@@ -13,6 +13,7 @@
   padding-right: 15pt;
   padding-top: 15pt;
   padding-bottom: 1cm;
+
   /* Added from Shanea's CSS */
 }
 
@@ -31,6 +32,7 @@
 
 .page-content {
   text-align: left;
+
   /* Restored original structure */
 }
 
@@ -45,9 +47,9 @@
 .img {
   height: auto;
   width: 250px;
-  float: right;
   border-color: black;
-  float: center;
+  /* Removed duplicate float */
+  float: right;
 }
 
 body {
