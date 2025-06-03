@@ -1,62 +1,69 @@
-// Copyright (c) 2025 Adrina peighambarzadeh All rights reserved
+// Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
 // Make sure rainSadEmojis is available (loaded from sadEmojiRain.js)
 //
 // Created by: Adrina Peighambarzadeh
 // Created on: June 2025
 // This file contains the JS functions for index.html
 
-'use strict'
+"use strict"
 
 /**
  * Check service worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js', {
-    scope: '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/'
-  })
+  navigator.serviceWorker.register(
+    "/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js",
+    {
+      scope: "/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/",
+    }
+  )
 }
+
+// Load the click sound (correct file path assumed to be in root folder)
+const clickSound = new Audio("./audio/mixkit-typewriter-soft-click-1125.wav'")
 
 /**
  * This function simulates a Yes/No spinner.
  */
 // eslint-disable-next-line no-unused-vars
-function spin () {
-  const question = document.getElementById('question').value.trim()
-  const resultEl = document.getElementById('result')
-  const yesImage = document.getElementById('yesImage')
-  const noImage = document.getElementById('noImage')
+function spin() {
+  // Play the sound
+  clickSound.currentTime = 0
+  clickSound.play()
+
+  const question = document.getElementById("question").value.trim()
+  const resultEl = document.getElementById("result")
+  const yesImage = document.getElementById("yesImage")
+  const noImage = document.getElementById("noImage")
 
   // Input validation
-  if (question === '') {
-    alert('Please enter a question.')
+  if (question === "") {
+    alert("Please enter a question.")
   } else {
     // Process: Generate random yes/no answer
     let answer
     if (Math.random() < 0.5) {
-      answer = 'Yes'
+      answer = "Yes"
     } else {
-      answer = 'No'
+      answer = "No"
     }
 
     // Output: Display result and image
-    resultEl.textContent = 'Question: ' + question + '\nAnswer: ' + answer
+    resultEl.textContent = "Question: " + question + "\nAnswer: " + answer
 
-    if (answer === 'Yes') {
-      yesImage.style.display = 'block'
-      noImage.style.display = 'none'
+    if (answer === "Yes") {
+      yesImage.style.display = "block"
+      noImage.style.display = "none"
 
       // 🎉 Confetti for 'Yes'
       confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { y: 0.6 },
       })
     } else {
-      yesImage.style.display = 'none'
-      noImage.style.display = 'block'
-    
-      const spinBtn = document.querySelector('button[type="button"]')
-      rainSadEmojis(spinBtn)
+      yesImage.style.display = "none"
+      noImage.style.display = "block"
     }
   }
 }
