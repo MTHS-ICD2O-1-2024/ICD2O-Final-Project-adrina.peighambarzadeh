@@ -54,7 +54,7 @@
 }
 
 body {
-  background-color: rgb(234, 213, 141);
+  background-color: rgb(255, 255, 255);
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 60px;
   text-align: center;
@@ -106,4 +106,27 @@ button {
 
   /* centers horizontally */
   max-width: 300px;
+}
+
+.sad-emoji {
+  font-size: 24px;
+  pointer-events: none;
+  user-select: none;
+  animation: fallSadEmoji 1.5s ease-out forwards;
+  will-change: transform, opacity;
+  position: fixed;
+  /* Ensure fixed positioning */
+  z-index: 9999;
+}
+
+@keyframes fallSadEmoji {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(120vh) translateX(calc(var(--rand-x, 0px))) scale(0.8);
+  }
 }

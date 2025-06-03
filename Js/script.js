@@ -1,7 +1,8 @@
-// Copyright (c) 2025 Ain Jeong All rights reserved
+// Copyright (c) 2025 Adrina peighambarzadeh All rights reserved
+// Make sure rainSadEmojis is available (loaded from sadEmojiRain.js)
 //
 // Created by: Adrina Peighambarzadeh
-// Created on: May 2025
+// Created on: June 2025
 // This file contains the JS functions for index.html
 
 'use strict'
@@ -39,12 +40,23 @@ function spin () {
 
     // Output: Display result and image
     resultEl.textContent = 'Question: ' + question + '\nAnswer: ' + answer
+
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
+
+      // 🎉 Confetti for 'Yes'
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      })
     } else {
       yesImage.style.display = 'none'
       noImage.style.display = 'block'
+    
+      const spinBtn = document.querySelector('button[type="button"]')
+      rainSadEmojis(spinBtn)
     }
   }
 }
