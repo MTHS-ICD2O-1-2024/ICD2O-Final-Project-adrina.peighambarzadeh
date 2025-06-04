@@ -19,18 +19,12 @@ if (navigator.serviceWorker) {
   )
 }
 
-// Load the click sound (correct file path assumed to be in root folder)
-const clickSound = new Audio("./audio/mixkit-typewriter-soft-click-1125.wav'")
 
 /**
  * This function simulates a Yes/No spinner.
  */
 // eslint-disable-next-line no-unused-vars
 function spin() {
-  // Play the sound
-  clickSound.currentTime = 0
-  clickSound.play()
-
   const question = document.getElementById("question").value.trim()
   const resultEl = document.getElementById("result")
   const yesImage = document.getElementById("yesImage")
@@ -49,7 +43,7 @@ function spin() {
     }
 
     // Output: Display result and image
-    resultEl.textContent = "Question: " + question + "\nAnswer: " + answer
+    resultEl.textContent = "Question: " + question + "Answer: " + answer
 
     if (answer === "Yes") {
       yesImage.style.display = "block"
