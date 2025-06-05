@@ -19,22 +19,21 @@ if (navigator.serviceWorker) {
   )
 }
 
-
 /**
  * This function simulates a Yes/No spinner.
  */
 // eslint-disable-next-line no-unused-vars
-function spin() {
+function spin () {
   const question = document.getElementById("question").value.trim()
   const resultEl = document.getElementById("result")
   const yesImage = document.getElementById("yesImage")
   const noImage = document.getElementById("noImage")
 
-  // Input validation
+  // Input 
   if (question === "") {
     alert("Please enter a question.")
   } else {
-    // Process: Generate random yes/no answer
+    // Process
     let answer
     if (Math.random() < 0.5) {
       answer = "Yes"
@@ -42,8 +41,8 @@ function spin() {
       answer = "No"
     }
 
-    // Output: Display result and image
-    resultEl.textContent = "Question: " + question + "Answer: " + answer
+    // Output
+    resultEl.textContent = "Answer: " + answer
 
     if (answer === "Yes") {
       yesImage.style.display = "block"
