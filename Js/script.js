@@ -47,7 +47,7 @@ function spin () {
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
-    
+
       // 🎉 Confetti for 'Yes'
       // eslint-disable-next-line no-unused-vars
       confetti({
@@ -55,7 +55,7 @@ function spin () {
         spread: 70,
         origin: { y: 0.6 }
       })
-  } else {
+    } else {
       yesImage.style.display = 'none'
       noImage.style.display = 'block'
     }
