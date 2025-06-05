@@ -13,8 +13,6 @@
   padding-right: 15pt;
   padding-top: 15pt;
   padding-bottom: 1cm;
-
-  /* Added from Shanea's CSS */
 }
 
 .mdl-textfield__error {
@@ -54,13 +52,12 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #fffcfc;
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 60px;
   text-align: center;
 }
 
-/* Styles from Shanea's version */
 input {
   width: 300px;
   padding: 8px;
@@ -106,4 +103,23 @@ button {
 
   /* centers horizontally */
   max-width: 300px;
+}
+
+.left-image {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+
+.right-image {
+  position: absolute;
+  right: 10px;
+  top: 80px;
+
+}
+
+.left-image img,
+.right-image img {
+  width: 200px;
+  height: 200px;
 }
