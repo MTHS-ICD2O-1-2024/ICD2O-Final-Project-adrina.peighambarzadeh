@@ -3,46 +3,46 @@
  * This file contains the CSS for index.html
  */
 
-.mdl-layout__header-row{
+.mdl-layout__header-row {
   justify-content: center;
   padding: 0;
 }
 
-.mdl-layout__content{
+.mdl-layout__content {
   padding-left: 15pt;
   padding-right: 15pt;
   padding-top: 15pt;
   padding-bottom: 1cm;
 }
 
-.mdl-textfield__error{
+.mdl-textfield__error {
   color: lightgreen;
 }
 
 .page-content,
 .page-content-guide,
-.page-content-answer{
+.page-content-answer {
   color: rgb(0 0 0);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   text-align: center;
 }
 
-.page-content{
+.page-content {
   text-align: left;
 
   /* Restored original structure */
 }
 
-.page-content-guide{
+.page-content-guide {
   margin-top: 40px;
 }
 
-.page-content-answer{
+.page-content-answer {
   margin-top: 20px;
 }
 
-.img{
+.img {
   height: auto;
   width: 250px;
   border-color: black;
@@ -51,53 +51,53 @@
   float: right;
 }
 
-body{
+body {
   background-color: rgb(250 250 255);
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 60px;
   text-align: center;
 }
 
-input{
+input {
   width: 300px;
   padding: 8px;
   font-size: 16px;
 }
 
-button{
+button {
   margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
 }
 
-#spinner-container{
+#spinner-container {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 30px auto;
 }
 
-#spinner-wheel{
+#spinner-wheel {
   width: 100%;
   transition: transform 4s ease-out;
   transform: rotate(0deg);
 }
 
-#result{
+#result {
   font-size: 20px;
   margin-top: 20px;
   font-weight: bold;
 }
 
-#wordsInput{
+#wordsInput {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
 #yesImage,
-#noImage{
+#noImage {
   display: block;
   margin: 20px auto;
 
@@ -105,13 +105,13 @@ button{
   max-width: 300px;
 }
 
-.left-image{
+.left-image {
   position: absolute;
   left: 10px;
   top: 80px;
 }
 
-.right-image{
+.right-image {
   position: absolute;
   right: 10px;
   top: 80px;
@@ -119,7 +119,7 @@ button{
 }
 
 .left-image img,
-.right-image img{
+.right-image img {
   width: 200px;
   height: 200px;
 }

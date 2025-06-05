@@ -49,7 +49,7 @@ function spin () {
       noImage.style.display = 'none'
 
       // 🎉 Confetti for 'Yes'
-      // eslint-disable-next-line no-unused-vars
+      let myConfetti = confetti.create();
       confetti({
         particleCount: 100,
         spread: 70,
