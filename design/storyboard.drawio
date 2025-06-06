@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="HIP3nbAZw_EuaXWnEj3U" name="Page-1">
-        <mxGraphModel dx="1797" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1044" dy="609" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="9" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Ask your question and spin to get Yes or No!&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
                     <mxGeometry x="182.5" y="130" width="380" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="&lt;font style=&quot;font-size: 18px; color: rgb(255, 255, 255);&quot;&gt;SPIN&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#00CC00;strokeColor=#82b366;" vertex="1" parent="7">
+                <mxCell id="13" value="&lt;font style=&quot;font-size: 18px; color: rgb(255, 255, 255);&quot;&gt;SPIN&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FF0000;strokeColor=#82b366;" vertex="1" parent="7">
                     <mxGeometry x="325" y="230" width="95" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;🎡Yes/No Spinner&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
