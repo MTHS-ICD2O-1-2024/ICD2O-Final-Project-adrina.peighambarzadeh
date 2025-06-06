@@ -13,8 +13,6 @@
   padding-right: 15pt;
   padding-top: 15pt;
   padding-bottom: 1cm;
-
-  /* Added from Shanea's CSS */
 }
 
 .mdl-textfield__error {
@@ -48,19 +46,16 @@
   height: auto;
   width: 250px;
   border-color: black;
-
-  /* Removed duplicate float */
   float: right;
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(250 250 255);
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 60px;
   text-align: center;
 }
 
-/* Styles from Shanea's version */
 input {
   width: 300px;
   padding: 8px;
@@ -108,25 +103,20 @@ button {
   max-width: 300px;
 }
 
-.sad-emoji {
-  font-size: 24px;
-  pointer-events: none;
-  user-select: none;
-  animation: fallSadEmoji 1.5s ease-out forwards;
-  will-change: transform, opacity;
-  position: fixed;
-  /* Ensure fixed positioning */
-  z-index: 9999;
+.left-image {
+  position: absolute;
+  left: 10px;
+  top: 80px;
 }
 
-@keyframes fallSadEmoji {
-  0% {
-    opacity: 1;
-    transform: translateY(0) translateX(0) scale(1);
-  }
+.right-image {
+  position: absolute;
+  right: 10px;
+  top: 80px;
+}
 
-  100% {
-    opacity: 0;
-    transform: translateY(120vh) translateX(calc(var(--rand-x, 0px))) scale(0.8);
-  }
+.left-image img,
+.right-image img {
+  width: 200px;
+  height: 200px;
 }
