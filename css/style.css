@@ -46,8 +46,6 @@
   height: auto;
   width: 250px;
   border-color: black;
-
-  /* Removed duplicate float */
   float: right;
 }
 
