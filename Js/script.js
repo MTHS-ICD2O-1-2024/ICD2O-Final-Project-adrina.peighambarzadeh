@@ -1,11 +1,12 @@
+/* global confetti */
+'use strict'
+
 // Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
 // Make sure rainSadEmojis is available (loaded from sadEmojiRain.js)
 //
 // Created by: Adrina Peighambarzadeh
 // Created on: June 2025
 // This file contains the JS functions for index.html
-
-'use strict'
 
 /**
  * Check service worker.
