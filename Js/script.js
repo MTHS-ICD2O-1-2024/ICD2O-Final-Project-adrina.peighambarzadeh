@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Adrina peighambarzadeh All rights reserved
+// Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
 // Make sure rainSadEmojis is available (loaded from sadEmojiRain.js)
 //
 // Created by: Adrina Peighambarzadeh
@@ -11,9 +11,12 @@
  * Check service worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js', {
-    scope: '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/'
-  })
+  navigator.serviceWorker.register(
+    '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js',
+    {
+      scope: '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/'
+    }
+  )
 }
 
 /**
@@ -26,11 +29,11 @@ function spin () {
   const yesImage = document.getElementById('yesImage')
   const noImage = document.getElementById('noImage')
 
-  // Input validation
+  // Input
   if (question === '') {
     alert('Please enter a question.')
   } else {
-    // Process: Generate random yes/no answer
+    // Process
     let answer
     if (Math.random() < 0.5) {
       answer = 'Yes'
@@ -38,14 +41,15 @@ function spin () {
       answer = 'No'
     }
 
-    // Output: Display result and image
-    resultEl.textContent = 'Question: ' + question + '\nAnswer: ' + answer
+    // Output
+    resultEl.textContent = 'Answer: ' + answer
 
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
 
       // 🎉 Confetti for 'Yes'
+      let myConfetti = confetti.create();
       confetti({
         particleCount: 100,
         spread: 70,
@@ -54,9 +58,6 @@ function spin () {
     } else {
       yesImage.style.display = 'none'
       noImage.style.display = 'block'
-    
-      const spinBtn = document.querySelector('button[type="button"]')
-      rainSadEmojis(spinBtn)
     }
   }
 }
