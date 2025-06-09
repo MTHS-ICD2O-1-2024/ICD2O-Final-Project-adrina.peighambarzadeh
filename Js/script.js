@@ -49,8 +49,8 @@ function spin () {
       noImage.style.display = 'none'
 
       // 🎉 Confetti for 'Yes'
-      let myConfetti = confetti.create();
-      confetti({
+      const myConfetti = confetti.create()
+      myConfetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 }
