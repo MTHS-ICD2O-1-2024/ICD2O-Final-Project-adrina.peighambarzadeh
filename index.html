@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Yes/No Spinner, with JS" />
+    <meta name="keywords" content="yes, no, spinner, js, icd2o" />
+    <meta name="author" content="Adrina Peighambarzadeh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.light_green-red.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Yes/No Spinner</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Yes/No Spinner, with JS" />
-  <meta name="keywords" content="yes, no, spinner, js, icd2o" />
-  <meta name="author" content="Adrina Peighambarzadeh" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-red.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <title>Yes/No Spinner</title>
-</head>
+    <!-- Load confetti lib in head or just before closing body -->
+    <!--Got this from a this website:https://css-tricks.com/write-code-get-confetti/-->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
