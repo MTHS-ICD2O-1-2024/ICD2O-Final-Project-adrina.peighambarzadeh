@@ -1,12 +1,14 @@
 /* Created by: Adrina peighambarzadeh
- * Created on: June 2025
- * This file contains the CSS for index.html
- */
+* Created on: June 2025
+* This file contains the CSS for index.html
+*/
+
 
 .mdl-layout__header-row {
   justify-content: center;
   padding: 0;
 }
+
 
 .mdl-layout__content {
   padding-left: 15pt;
@@ -15,9 +17,11 @@
   padding-bottom: 1cm;
 }
 
+
 .mdl-textfield__error {
   color: lightgreen;
 }
+
 
 .page-content,
 .page-content-guide,
@@ -28,19 +32,24 @@
   text-align: center;
 }
 
+
 .page-content {
   text-align: left;
 
+
   /* Restored original structure */
 }
+
 
 .page-content-guide {
   margin-top: 40px;
 }
 
+
 .page-content-answer {
   margin-top: 20px;
 }
+
 
 .img {
   height: auto;
@@ -49,6 +58,7 @@
   float: right;
 }
 
+
 body {
   background-color: rgb(250 250 255);
   font-family: Helvetica, Arial, sans-serif;
@@ -56,11 +66,13 @@ body {
   text-align: center;
 }
 
+
 input {
   width: 300px;
   padding: 8px;
   font-size: 16px;
 }
+
 
 button {
   margin: 10px;
@@ -69,6 +81,7 @@ button {
   cursor: pointer;
 }
 
+
 #spinner-container {
   position: relative;
   width: 250px;
@@ -76,11 +89,13 @@ button {
   margin: 30px auto;
 }
 
+
 #spinner-wheel {
   width: 100%;
   transition: transform 4s ease-out;
   transform: rotate(0deg);
 }
+
 
 #result {
   font-size: 20px;
@@ -88,20 +103,24 @@ button {
   font-weight: bold;
 }
 
+
 #wordsInput {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
+
 #yesImage,
 #noImage {
   display: block;
   margin: 20px auto;
 
+
   /* centers horizontally */
   max-width: 300px;
 }
+
 
 .left-image {
   position: absolute;
@@ -109,11 +128,13 @@ button {
   top: 80px;
 }
 
+
 .right-image {
   position: absolute;
   right: 10px;
   top: 80px;
 }
+
 
 .left-image img,
 .right-image img {

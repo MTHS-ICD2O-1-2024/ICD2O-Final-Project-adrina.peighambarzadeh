@@ -1,6 +1,7 @@
 /* global confetti */
 'use strict'
 
+
 // Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
 // Make sure rainSadEmojis is available (loaded from sadEmojiRain.js)
 //
@@ -8,21 +9,23 @@
 // Created on: June 2025
 // This file contains the JS functions for index.html
 
-/**
- * Check service worker.
- */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register(
-    '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js',
-    {
-      scope: '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/'
-    }
-  )
-}
 
 /**
- * This function simulates a Yes/No spinner.
- */
+* Check service worker.
+*/
+if (navigator.serviceWorker) {
+ navigator.serviceWorker.register(
+   '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/sw.js',
+   {
+     scope: '/ICD2O-Unit-6-01-B-Adrina-peighambarzadeh/'
+   }
+ )
+}
+
+
+/**
+* This function simulates a Yes/No spinner.
+*/
 // eslint-disable-next-line no-unused-vars
 function spin () {
   const question = document.getElementById('question').value.trim()
@@ -30,31 +33,22 @@ function spin () {
   const yesImage = document.getElementById('yesImage')
   const noImage = document.getElementById('noImage')
 
-  // Input
   if (question === '') {
     alert('Please enter a question.')
   } else {
-    // Process
-    let answer
-    if (Math.random() < 0.5) {
-      answer = 'Yes'
-    } else {
-      answer = 'No'
-    }
+    let answer = Math.random() < 0.5 ? 'Yes' : 'No'
 
-    // Output
     resultEl.textContent = 'Answer: ' + answer
 
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
 
-      // 🎉 Confetti for 'Yes'
-      const myConfetti = confetti.create()
-      myConfetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { x: 0.5, y: 0.6 } // center horizontally, 60% from the top
+      // Confetti centered on the entire window
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { x: 0.5, y: 0.5 }  // center horizontally and vertically
       })
     } else {
       yesImage.style.display = 'none'
