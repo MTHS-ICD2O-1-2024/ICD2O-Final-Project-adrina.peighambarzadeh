@@ -4,3 +4,8 @@ I'm making a spinning wheel, split in half. One side says "Yes" and the other sa
 
 
 Click here to see my website🥰: [Link](https://mths-icd2o-1-2024.github.io/ICD2O-Final-Project-adrina.peighambarzadeh/) 
+
+This is the sources that I got my confetti and the code for it from 
+-https://github.com/catdad/canvas-confetti
+-https://www.npmjs.com/package/canvas-confetti
+-https://www.kirilv.com/canvas-confetti/

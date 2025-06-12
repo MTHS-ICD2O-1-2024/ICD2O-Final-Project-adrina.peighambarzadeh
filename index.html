@@ -1,65 +1,98 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Yes/No Spinner, with JS" />
+    <meta name="keywords" content="yes, no, spinner, js, icd2o" />
+    <meta name="author" content="Adrina Peighambarzadeh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.light_green-red.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Yes/No Spinner</title>
+    <!-- ✅ GIT THIS FROM CONFETTI LIBRARY:https://github.com/catdad/canvas-confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Yes/No Spinner, with JS" />
-  <meta name="keywords" content="yes, no, spinner, js, icd2o" />
-  <meta name="author" content="Adrina Peighambarzadeh" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-red.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <title>Yes/No Spinner</title>
-  <!-- ✅ GIT THIS FROM CONFETTI LIBRARY:https://github.com/catdad/canvas-confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
-
-<body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">🎡 Yes/No Spinner</span>
-      </div>
-    </header>
-    <div class="left-image">
-      <img src="./image/X.png" alt="X-image" />
-    </div>
-    <div class="right-image">
-      <img src="./image/tick.png" alt="tick-image" />
-    </div>
-    <main class="mdl-layout__content">
-      <br />
-      <div class="page-content-guide">
-        Ask your question and spin to get Yes or No!
-      </div>
-      <form>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="question" />
-          <label class="mdl-textfield__label" for="question">Ask your question...</label>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">🎡 Yes/No Spinner</span>
         </div>
-        <br />
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="spin()" type="button">
-          Spin
-        </button>
-      </form>
-      <br />
-      <div class="page-content-answer">
-        <p id="result"></p>
-        <img id="yesImage" src="./image/Yes.png" alt="Yes Image" style="display: none; max-width: 300px" />
-        <img id="noImage" src="./image/No.png" alt="No Image" style="display: none; max-width: 300px" />
+      </header>
+      <div class="left-image">
+        <img src="./image/X.png" alt="X-image" />
       </div>
-    </main>
-  </div>
+      <div class="right-image">
+        <img src="./image/tick.png" alt="tick-image" />
+      </div>
+      <main class="mdl-layout__content">
+        <br />
+        <div class="page-content-guide">
+          Ask your question and spin to get Yes or No!
+        </div>
+        <form>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="question" />
+            <label class="mdl-textfield__label" for="question"
+              >Ask your question...</label
+            >
+          </div>
+          <br />
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="spin()"
+            type="button"
+          >
+            Spin
+          </button>
+        </form>
+        <br />
+        <div class="page-content-answer">
+          <p id="result"></p>
+          <img
+            id="yesImage"
+            src="./image/Yes.png"
+            alt="Yes Image"
+            style="display: none; max-width: 300px"
+          />
+          <img
+            id="noImage"
+            src="./image/No.png"
+            alt="No Image"
+            style="display: none; max-width: 300px"
+          />
+        </div>
+      </main>
+    </div>
 
-  <!-- JS libraries -->
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="./Js/script.js"></script>
-</body>
-
+    <!-- JS libraries -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./Js/script.js"></script>
+  </body>
 </html>
