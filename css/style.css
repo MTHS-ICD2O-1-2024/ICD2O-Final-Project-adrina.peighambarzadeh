@@ -30,7 +30,8 @@
 
 .page-content {
   text-align: left;
-/* Restored original structure */
+
+  /* Restored original structure */
 }
 
 .page-content-guide {
@@ -97,7 +98,8 @@ button {
 #noImage {
   display: block;
   margin: 20px auto;
-/* centers horizontally */
+
+  /* centers horizontally */
   max-width: 300px;
 }
 
