@@ -54,7 +54,7 @@ function spin () {
       myConfetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { x: 0.5, y: 0.6 } // center horizontally, 60% from the top
       })
     } else {
       yesImage.style.display = 'none'
