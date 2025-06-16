@@ -30,31 +30,22 @@ function spin () {
   const yesImage = document.getElementById('yesImage')
   const noImage = document.getElementById('noImage')
 
-  // Input
   if (question === '') {
     alert('Please enter a question.')
   } else {
-    // Process
-    let answer
-    if (Math.random() < 0.5) {
-      answer = 'Yes'
-    } else {
-      answer = 'No'
-    }
+    const answer = Math.random() < 0.5 ? 'Yes' : 'No'
 
-    // Output
     resultEl.textContent = 'Answer: ' + answer
 
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
 
-      // 🎉 Confetti for 'Yes'
-      const myConfetti = confetti.create()
-      myConfetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { x: 0.5, y: 0.6 } // center horizontally, 60% from the top
+      // Confetti centered on my entire window
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { x: 0.5, y: 0.5 } // center horizontally and vertically
       })
     } else {
       yesImage.style.display = 'none'
