@@ -41,7 +41,7 @@ function spin () {
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
-      //GOT THIS FROM CONFETTI LIBRARY:https://github.com/catdad/canvas-confetti
+      //GOT THE CODE FROM:https://www.kirilv.com/canvas-confetti/
       // Confetti centered on my entire window
       confetti({
         particleCount: 150,
