@@ -1,4 +1,5 @@
 /* global confetti */
+
 'use strict'
 
 // Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
@@ -40,7 +41,7 @@ function spin () {
     if (answer === 'Yes') {
       yesImage.style.display = 'block'
       noImage.style.display = 'none'
-
+      //GOT THIS FROM CONFETTI LIBRARY:https://github.com/catdad/canvas-confetti
       // Confetti centered on my entire window
       confetti({
         particleCount: 150,

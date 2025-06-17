@@ -6,7 +6,8 @@ I made a spinning wheel, splited in half. One side says "Yes" and the other says
 
 Click here to see my website🥰: [Link](https://mths-icd2o-1-2024.github.io/ICD2O-Final-Project-adrina.peighambarzadeh/) 
 
-This is the sources that I got my confetti and the code from: 
-<br/>-https://github.com/catdad/canvas-confetti  
-<br/>-https://www.npmjs.com/package/canvas-confetti  
-<br/>-https://www.kirilv.com/canvas-confetti/
+This is the sources:<br/>
++ Confetti:<br/>-https://www.npmjs.com/package/canvas-confetti  
++ Code for the Confetti:<br/>-https://www.kirilv.com/canvas-confetti/
++ Images:<br/>- [Flat icon](https://www.flaticon.com/)
+
